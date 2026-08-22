@@ -1,0 +1,147 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#C8102E',
+          50: '#FDF2F4',
+          100: '#FBE6E9',
+          200: '#F6CDD3',
+          300: '#EEA4AE',
+          400: '#E36F80',
+          500: '#C8102E',
+          600: '#B00D28',
+          700: '#930A21',
+          800: '#7A091D',
+          900: '#66091A',
+          950: '#37030E',
+        },
+        ink: {
+          DEFAULT: '#111111',
+          50: '#F5F5F5',
+          100: '#E5E5E5',
+          200: '#C9C9C9',
+          300: '#A3A3A3',
+          400: '#6B6B6B',
+          500: '#4A4A4A',
+          600: '#333333',
+          700: '#222222',
+          800: '#161616',
+          900: '#0B0B0B',
+        },
+        cream: {
+          DEFAULT: '#F8F7F4',
+          50: '#FDFDFC',
+          100: '#F8F7F4',
+          200: '#F1EFE9',
+          300: '#E8E5DC',
+          400: '#DCD8CC',
+          500: '#CBC5B5',
+        },
+        gold: {
+          DEFAULT: '#D4AF37',
+          50: '#FBF8EC',
+          100: '#F6EFCF',
+          200: '#ECDFA0',
+          300: '#E0CB6E',
+          400: '#D4AF37',
+          500: '#BF9A2C',
+          600: '#A37F24',
+          700: '#856521',
+          800: '#6E5321',
+          900: '#5E471F',
+        },
+        success: {
+          DEFAULT: '#16A34A',
+          50: '#F0FDF4',
+          500: '#16A34A',
+          600: '#15803D',
+          700: '#166534',
+        },
+        warning: {
+          DEFAULT: '#F59E0B',
+          50: '#FFFBEB',
+          500: '#F59E0B',
+          600: '#D97706',
+        },
+        error: {
+          DEFAULT: '#DC2626',
+          50: '#FEF2F2',
+          500: '#DC2626',
+          600: '#B91C1C',
+        },
+        muted: '#6B7280',
+      },
+      fontFamily: {
+        heading: ['"Playfair Display"', 'serif'],
+        body: ['Poppins', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        'display-xl': ['4.5rem', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
+        'display-lg': ['3.5rem', { lineHeight: '1.08', letterSpacing: '-0.02em' }],
+        'display-md': ['2.75rem', { lineHeight: '1.12', letterSpacing: '-0.01em' }],
+      },
+      borderRadius: {
+        'xl': '1rem',
+        '2xl': '1.25rem',
+        '3xl': '1.75rem',
+        '4xl': '2.5rem',
+      },
+      boxShadow: {
+        'soft': '0 2px 12px -2px rgba(17, 17, 17, 0.06), 0 1px 3px -1px rgba(17, 17, 17, 0.04)',
+        'card': '0 4px 24px -6px rgba(17, 17, 17, 0.08), 0 2px 8px -2px rgba(17, 17, 17, 0.04)',
+        'lift': '0 12px 40px -8px rgba(17, 17, 17, 0.12), 0 4px 12px -4px rgba(17, 17, 17, 0.06)',
+        'glow': '0 0 40px -8px rgba(200, 16, 46, 0.3)',
+        'gold': '0 0 30px -6px rgba(212, 175, 55, 0.4)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'cubic-bezier(0.22, 1, 0.36, 1)',
+      },
+      keyframes: {
+        'fade-up': {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'scale-in': {
+          '0%': { opacity: '0', transform: 'scale(0.96)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        'shimmer': {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        'slide-down': {
+          '0%': { opacity: '0', transform: 'translateY(-100%)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'marquee': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        'fade-up': 'fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both',
+        'fade-in': 'fade-in 0.5s ease both',
+        'scale-in': 'scale-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both',
+        'shimmer': 'shimmer 2s linear infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'slide-down': 'slide-down 0.3s ease both',
+        'marquee': 'marquee 40s linear infinite',
+      },
+      backgroundImage: {
+        'grid-pattern': "linear-gradient(to right, rgba(17,17,17,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(17,17,17,0.03) 1px, transparent 1px)",
+      },
+    },
+  },
+  plugins: [],
+};
